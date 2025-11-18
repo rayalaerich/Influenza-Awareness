@@ -1,60 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Influenza Awareness Website - Version 1</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Influenza Awareness</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 <body>
+  <!-- Navigation Bar -->
   <header>
-    <h1>Influenza Awareness</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#symptoms">Symptoms</a>
-      <a href="#prevention">Prevention</a>
-      <a href="#treatment">Treatment</a>
-      <a href="#contact">Contact</a>
+    <nav class="navbar">
+      <h1 class="logo">Influenza Awareness</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#symptoms">Symptoms</a></li>
+        <li><a href="#prevention">Prevention</a></li>
+        <li><a href="#sick">Treatment</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="about">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+  <div class="hero-text">
+    <h1>Stay Informed. Stay Protected.</h1>
+    <p>Learn how to prevent, recognize, and treat influenza effectively.</p>
+    <a href="#about" class="btn">Learn More</a>
+
+  </div>
+  <img src="maskmain.png" alt="Influenza Awareness">
+</section>
+
+  <!-- About Influenza -->
+ <section id="about">
+  <div class="content">
     <h2>What is Influenza?</h2>
-    <p>Influenza, commonly known as the flu, is a viral infection that affects the respiratory system. 
-       It can cause mild to severe illness, and sometimes can lead to hospitalization.</p>
-  </section>
+    <p>
+      Influenza, commonly known as the flu, is a contagious respiratory illness caused by influenza viruses.
+      It can cause mild to severe symptoms, including fever, cough, sore throat, muscle aches, and fatigue.
+      Getting vaccinated each year and practicing good hygiene are the best ways to protect yourself
+      and others from the flu.
+    </p>
+  </div>
+</section>
 
-  <section id="symptoms">
-    <h2>Symptoms</h2>
-    <ul>
-      <li>Fever</li>
-      <li>Cough</li>
-      <li>Runny or stuffy nose</li>
-      <li>Body aches</li>
-      <li>Headache</li>
-      <li>Fatigue</li>
-    </ul>
-  </section>
 
-  <section id="prevention">
-    <h2>How to Prevent Influenza</h2>
-    <p>Wash your hands regularly, avoid close contact with sick people, and get vaccinated every year.</p>
-  </section>
 
-  <section id="treatment">
-    <h2>What to Do if You're Sick</h2>
-    <p>Stay at home, rest, drink plenty of fluids, and consult a doctor if symptoms worsen.</p>
-  </section>
 
-  <section id="contact">
-    <h2>Contact and Helpline</h2>
-    <p>DOH Hotline: 1555</p>
-    <p>Email: fluhelp@doh.gov.ph</p>
-    <p>Facebook: facebook.com/OfficialDOHgov</p>
-  </section>
+  <!-- Symptoms -->
+  <section id="symptoms" class="symptoms-section">
+  <h2>Common Symptoms of Influenza</h2>
+  <div class="symptom-container">
+    <div class="symptom-box">
+      <img src="fever.png" alt="Fever Icon">
+      <p>Fever</p>
+    </div>
+    <div class="symptom-box">
+      <img src="cough.png" alt="Cough Icon">
+      <p>Cough</p>
+    </div>
+    <div class="symptom-box">
+      <img src="sore-throat.png" alt="Sore Throat Icon">
+      <p>Sore Throat</p>
+    </div>
+    <div class="symptom-box">
+      <img src="headache.png" alt="Headache Icon">
+      <p>Headache</p>
+    </div>
+    <div class="symptom-box">
+      <img src="muscle-pain.png" alt="Muscle Pain Icon">
+      <p>Muscle Pain</p>
+    </div>
+    <div class="symptom-box">
+      <img src="fatigue.png" alt="Fatigue Icon">
+      <p>Fatigue</p>
+    </div>
+  </div>
+</section>
 
+
+  <!-- Prevention -->
+ <section id="prevention" class="prevention-section">
+  <h2>How to Prevent Influenza</h2>
+
+  <!-- first row -->
+  <div class="prevent-row top-row">
+    <div class="prevent-item">
+      <img src="washing-hand.png" alt="Wash Hands">
+      <p>Wash your hands frequently.</p>
+    </div>
+
+    <div class="prevent-item">
+      <img src="mask.png" alt="Wear Mask">
+      <p>Wear a face mask in crowded places.</p>
+    </div>
+
+    <div class="prevent-item">
+      <img src="syringe.png" alt="Get Vaccinated">
+      <p>Get your flu vaccine every year.</p>
+    </div>
+  </div>
+
+  <!-- second row -->
+  <div class="prevent-row bottom-row">
+    <div class="prevent-item">
+      <img src="cover-your-cough.png" alt="Cover Cough">
+      <p>Cover your mouth when coughing or sneezing.</p>
+    </div>
+
+    <div class="prevent-item">
+      <img src="comfort-zone.png" alt="Rest">
+      <p>Stay home and rest when you’re sick.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Treatment -->
+  <section id="sick" class="sick-section">
+  <h2>What To Do If You’re Sick?</h2>
+  <p class="sick-intro">If you start showing influenza symptoms, follow these simple steps to recover and avoid spreading the virus.</p>
+
+  <div class="sick-cards">
+    <div class="sick-card">
+      <img src="stay-at-home.png" alt="Stay at Home">
+      <h3>Stay at Home</h3>
+      <p>Rest and avoid close contact with others to prevent spreading infection.</p>
+    </div>
+
+    <div class="sick-card">
+      <img src="take-medicines.png" alt="Take Medicine">
+      <h3>Take Medicine</h3>
+      <p>Use fever reducers or cough medicine as advised by your doctor.</p>
+    </div>
+
+    <div class="sick-card">
+      <img src="doctor.png" alt="Call a Doctor">
+      <h3>Call a Doctor</h3>
+      <p>Seek medical help if symptoms get worse or if you have breathing difficulties.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & HELPLINE SECTION -->
+<section id="contact">
+  <h2>Contact and Helpline</h2>
+  <p>If you are experiencing influenza symptoms or need medical guidance, contact the following helplines or message us below.</p>
+
+  <div class="contact-row">
+    <div class="contact-item">
+      <i class="fa-solid fa-phone-volume"></i>
+      <p><strong>DOH Hotline:</strong> 1555</p>
+      <p><strong>Health Emergency:</strong> (02) 894-26843</p>
+    </div>
+
+    <div class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <p><a href="mailto:fluhelp@doh.gov.ph">fluhelp@doh.gov.ph</a></p>
+    </div>
+
+    <div class="contact-item">
+      <i class="fa-brands fa-facebook"></i>
+      <p><a href="https://www.facebook.com/OfficialDOHgov" target="_blank">facebook.com/OfficialDOHgov</a></p>
+    </div>
+  </div>
+</section>
+
+
+ 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Influenza Awareness Website | Partido State University</p>
+    <p>© 2025 Influenza Awareness Project | Created by Our Team</p>
+    <p>Group Members: <strong>Erich Rayala</strong>, <strong>Carl Torrecampo</strong>
+    <strong>Kimberly Pascua</strong>, <strong>Julius Peña</strong>
+    </p>
   </footer>
+  <script src="script.js"></script>
+
 </body>
 </html>

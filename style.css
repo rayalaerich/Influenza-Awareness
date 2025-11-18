@@ -1,43 +1,490 @@
-body {
-  font-family: Arial, sans-serif;
+/* General Reset */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Navbar */
 header {
-  background-color: lightblue;
+  background-color: #e6f3ff;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: #007acc;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #005999;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 50px;
+  background-color: #f9fcff;
+}
+.hero-content {
+  max-width: 500px;
+}
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #004f80;
+}
+.hero-content p {
+  margin: 15px 0;
+  color: #333;
+}
+.btn {
+  display: inline-block;
+  background-color: #007acc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #005999;
+}
+.hero-img {
+  width: 350px;
+}
+
+/* Sections */
+.section {
+  padding: 70px 50px;
+  text-align: center;
+}
+.section.light {
+  background-color: #f0f8ff;
+}
+.section h2 {
+  color: #004f80;
+  margin-bottom: 20px;
+}
+.section p {
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+.card {
+  background-color: #e6f3ff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 180px;
+  font-weight: 500;
+  color: #004f80;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Prevention List */
+.prevention-list {
+  list-style: none;
+  margin-top: 20px;
+}
+.prevention-list li {
+  margin: 10px 0;
+  color: #004f80;
+  font-weight: 500;
+}
+
+/* Contact */
+.contact-info p, .contact-info a {
+  color: #004f80;
+  font-size: 1.1em;
+}
+.contact-info a {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #007acc;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 25px 0;
+  margin-top: 40px;
+}
+footer strong {
+  color: #e6f3ff;
 }
 
-nav {
-  background-color: #e0e0e0;
-  padding: 5px;
+/* HERO SECTION (text + image) */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background-color: #f8fcff;
 }
 
-nav a {
-  text-decoration: none;
-  color: black;
-  margin: 0 10px;
+/* Make the image a bit closer to text */
+.hero img {
+  width: 420px;
+  margin-left: 40px; /* smaller space between text and image */
+}
+
+/* Adjust text size and spacing */
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 48px; /* larger headline */
+  font-weight: 700;
+  color: #004aad;
+  line-height: 1.2; /* tighter lines */
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.hero-text button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-text button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* --- WHAT IS INFLUENZA SECTION --- */
+/* About Section - Influenza Explanation */
+#about {
+  position: relative;
+  background: url('virus.jpg') center/cover no-repeat;
+  color: white;
+  padding: 120px 60px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* This layer darkens + blurs the image */
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 20, 40, 0.6); /* darker tint */
+  backdrop-filter: blur(5px); /* subtle blur on background */
+  z-index: 0;
+}
+
+#about .content {
+  position: relative;
+  z-index: 1; /* keeps text on top */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#about h2 {
+  font-size: 2.8rem;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
-section {
-  padding: 20px;
-  background-color: white;
-  margin: 10px;
-  border: 1px solid #ccc;
+#about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
-h2 {
+
+/* --- SYMPTOMS SECTION --- */
+.symptoms-section {
+  text-align: center;
+  background-color: #eaf4ff;
+  padding: 80px 5%;
+}
+
+.symptoms-section h2 {
+  font-size: 42px;
+  color: #004aad;
+  margin-bottom: 50px;
+}
+
+/* Container for the 6 rectangles */
+.symptom-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+/* Each rectangle box */
+.symptom-box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 150px;
+  max-width: 180px;
+  padding: 25px 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.symptom-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon inside each box */
+.symptom-box img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+/* Text inside each box */
+.symptom-box p {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Responsive (mobile view) */
+@media (max-width: 768px) {
+  .symptom-container {
+    justify-content: center;
+  }
+  .symptom-box {
+    max-width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .symptom-box {
+    max-width: 100%;
+  }
+}
+
+/*Prevention*/
+
+.prevention-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f2f8ff;
+}
+
+.prevention-section h2 {
+  font-size: 2em;
+  color: #004aad;
+  margin-bottom: 40px;
+}
+
+.prevent-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.prevent-item {
+  text-align: center;
+  max-width: 180px;
+}
+
+.prevent-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.prevent-item img:hover {
+  transform: scale(1.1);
+}
+
+.prevent-item p {
+  font-size: 1em;
   color: #333;
 }
 
-footer {
-  background-color: lightblue;
-  color: white;
+/* bottom row centered under top row */
+.bottom-row {
+  justify-content: center;
+  gap: 80px;
+  margin-top: -10px;
+}
+
+/* mobile friendly */
+@media (max-width: 768px) {
+  .prevent-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*TREATMENT*/
+.sick-section {
   text-align: center;
-  padding: 10px 0;
+  padding: 70px 20px;
+  background-color: #c3dfff;
+}
+
+.sick-section h2 {
+  font-size: 2em;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.sick-intro {
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1em;
+}
+
+.sick-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.sick-card {
+  background: #eaf4ff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sick-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.sick-card img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+}
+
+.sick-card h3 {
+  color: #0057b8;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.sick-card p {
+  color: #333;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* mobile friendly */
+@media (max-width: 768px) {
+  .sick-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sick-card {
+    width: 85%;
+  }
+}
+
+/* CONTACT & HELPLINE SECTION */
+#contact {
+  background-color: #f8fbff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contact h2 {
+  color: #004aad;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  color: #333;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap; /* para responsive sa smaller screens */
+}
+
+.contact-item {
+  width: 250px;
+  text-align: center;
+}
+
+.contact-item i {
+  font-size: 2.5em;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.contact-item h3 {
+  color: #004aad;
+  font-size: 1.4em;
+  margin-bottom: 8px;
+}
+
+.contact-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: #004aad;
+  text-decoration: underline;
 }
